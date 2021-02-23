@@ -1,4 +1,4 @@
-export let movies = [
+let movies = [
     {
         id : 1,
         name : "Avengers",
@@ -24,12 +24,12 @@ export let movies = [
 export const getMovies = () => movies;
 
 export const getById = id => {
-    const filteredPeole = movies.filter(movie => movie.id === String(id));
+    const filteredPeole = movies.filter(movie => movie.id === id);
     return filteredPeole[0];
 }
 
 export const deleteMovie = (id) => {
-    const cleanMovies = movies.filter(movie => movie.id !== String(id));
+    const cleanMovies = movies.filter(movie => movie.id !== id);
     if(movies.length > cleanMovies.length){
         movie = cleanMovies;
         return true;
